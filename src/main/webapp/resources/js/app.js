@@ -246,7 +246,6 @@ var member= (()=>{
 var common= (()=>{
 	return{
 		main : x=>{
-			alert(x);
 			if(document.getElementById('goUserLoginForm')!=null){
 				document.getElementById('goUserLoginForm').addEventListener('click', ()=>{
 					 router.move({
