@@ -9,7 +9,7 @@
 			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
 		</layout>
 	</appender>
-	
+	 
 	<!-- Application Loggers -->
 	<logger name="com.gms.web">
 		<level value="info" />
