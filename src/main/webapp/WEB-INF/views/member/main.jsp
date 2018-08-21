@@ -37,7 +37,7 @@
 					<jsp:include page="retrieve.jsp"/>
 				</c:when>
 				<c:when test="${pagename eq 'remove'}">
-					<jsp:include page="remove.jsp"/>
+					<jsp:include page="remove.jsp"/> 
 				</c:when>
 				<c:when test="${pagename eq 'modify'}">
 					<jsp:include page="modify.jsp"/>
