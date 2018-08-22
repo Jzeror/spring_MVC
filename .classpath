@@ -30,7 +30,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/Users/1027/Downloads/tiles-jsp-3.0.1.jar/tiles-jsp-3.0.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/1027/Downloads/commons-beanutils-1.8.3.jar/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/1027/Downloads/tiles-jsp-3.0.1.jar/tiles-jsp-3.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
