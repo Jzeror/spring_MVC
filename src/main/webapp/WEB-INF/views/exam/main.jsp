@@ -7,8 +7,6 @@
 	<div id="wrapper">
 		<div id="header">
 		<관리자 페이지>
-			<jsp:include page="../common/title_box.jsp" />
-			<jsp:include page="../common/menu_box.jsp" />
 		</div>
 		<!-- header end -->
 		<div id="content">

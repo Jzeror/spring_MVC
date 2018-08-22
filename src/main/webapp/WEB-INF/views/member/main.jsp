@@ -7,22 +7,17 @@
 <body>
 	<div id="wrapper">
 		<div id="header">
-			<jsp:include page="../common/title_box.jsp" />
 			<c:choose>
 				<c:when test="${log eq 'login'}">
-					<jsp:include page="../common/logout_box.jsp" />
 				</c:when>
 				<c:otherwise>
-					<jsp:include page="../common/login_box.jsp" />
 				</c:otherwise>
 			</c:choose>
-			<jsp:include page="../common/menu_box.jsp" />
 		</div>	
 		<div id="content">
 		이동페이지 : ${pagename}
 			<c:choose>
 				<c:when test="${pagename eq 'main'}">
-					<jsp:include page="../common/content_box.jsp"/>
 				</c:when>
 				<c:when test="${pagename eq 'add'}">
 					<jsp:include page="add.jsp"/>
@@ -43,7 +38,6 @@
 					<jsp:include page="modify.jsp"/>
 				</c:when>
 				<c:otherwise>
-					<jsp:include page="../common/content_box.jsp"/>
 				</c:otherwise>
 			</c:choose>
 		</div>	

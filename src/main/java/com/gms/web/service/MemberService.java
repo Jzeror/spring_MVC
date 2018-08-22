@@ -6,7 +6,7 @@ import java.util.Map;
 import com.gms.web.domain.MemberDTO;
 
 public interface MemberService {
-	public void add(MemberDTO p) ;
+	public void add(MemberDTO p) ; // com.gms.web.domain.MemberDTO
 	public List<?> list(Map<?,?> p) ;
 	public List<?> search(Map<?,?> p) ;
 	public MemberDTO retrieve(Map<?,?> p) ;
