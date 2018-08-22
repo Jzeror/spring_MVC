@@ -26,4 +26,4 @@ app.session = {
 		path : x=>{
 			return sessionStorage.getItem(x);
 		}
-};
+}; 
