@@ -46,6 +46,7 @@
 		</div>
 	</div>
 <script>
+
 	member.main('${context}');
 </script>
 </body>

@@ -12,9 +12,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link href="${context}/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="${context}/resources/css/agency.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="${context}/resources/css/style.css">
     
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
 	<script src="${context}/resources/vendor/jquery/jquery.min.js"></script>
 	<script src="${context}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="${context}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>

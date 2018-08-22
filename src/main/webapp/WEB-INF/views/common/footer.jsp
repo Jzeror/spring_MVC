@@ -244,3 +244,4 @@
         </div>
       </div>
     </div>
+    <script src="${context}/resources/js/agency.min.js"></script>
