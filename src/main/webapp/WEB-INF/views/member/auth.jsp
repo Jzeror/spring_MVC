@@ -9,11 +9,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
-     	<li class="nav-item">
-          <a class="nav-link js-scroll-trigger" id="login_btn_nav">Login</a>
+   		<li class="nav-item">
+          <a class="nav-link js-scroll-trigger" id="login_out_auth" >Logout</a>
         </li>
    		<li class="nav-item">
-          <a class="nav-link js-scroll-trigger" id="join_btn_nav">Join</a>
+          <a class="nav-link js-scroll-trigger" >MyPage</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#services">Services</a>

@@ -21,11 +21,13 @@ public class MemberController {
     @RequestMapping("/remove")
     public void remove() {}
     @RequestMapping("/login")
-    public void login() {}
+    public String login() {
+    	return "login_success";
+    }
     @RequestMapping("/logout")
-    public void logout() {}
-    @RequestMapping("/move")
-    public void move() {}
+    public String logout() {
+    	return "redirect:/";
+    }
     @RequestMapping("/fileupload")
     public void fileupload() {}
     
