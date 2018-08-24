@@ -12,7 +12,7 @@ app = {
 		app.setContentView();
 		
 		$('#login_btn_header').click(()=>{
-			location.href= "/move/auth/member/login";
+			location.href= app.x()+"/move/auth/member/login";
 		});
 		$('#login_btn_nav').click(()=>{
 			location.href = app.x()+'/move/auth/member/login';
