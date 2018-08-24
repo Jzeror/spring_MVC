@@ -23,8 +23,8 @@ public class HomeController {
         String context = request.getContextPath();
         logger.info("Welcome home! The client locale is {}.", context);
         session.setAttribute("context", context);
-        return "public:common/content.tiles";
-    }
+        return "public:common/content.tiles"; 
+    } 
     
     @RequestMapping("/move/{prefix}/{dir}/{page}")
     public String move(
