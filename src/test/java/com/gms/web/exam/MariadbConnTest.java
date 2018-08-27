@@ -8,6 +8,6 @@ public class MariadbConnTest {
 	@Test
 	public void test() {
 		MariadbConn m = new MariadbConn();
-		assertEquals("RYU", m.exam());
+		assertEquals("혜리", m.exam());
 	}
 }

@@ -3,13 +3,15 @@ package com.gms.web.service.impl;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gms.web.domain.MemberDTO;
+import com.gms.web.repository.MemberDAO;
 import com.gms.web.service.MemberService;
 @Service
 public class MemberServiceImpl implements MemberService{
-
+	@Autowired MemberDAO memberDAO;
 	@Override
 	public void add(MemberDTO p) {
 		// TODO Auto-generated method stub
@@ -30,8 +32,7 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public MemberDTO retrieve(Map<?, ?> p) {
-		// TODO Auto-generated method stub
-		return null;
+		return memberDAO.selectOne(p);
 	}
 
 	@Override

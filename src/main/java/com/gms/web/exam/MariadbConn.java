@@ -14,18 +14,18 @@ public class MariadbConn {
 						"mariadb", 
 						"mariadb");
 				stmt = conn.createStatement();
-				ResultSet rs = stmt.executeQuery(String.format(
-						"SELECT MEM_ID FROM MEMBER ")
+				ResultSet rs = stmt.executeQuery(
+						"SELECT NAME FROM MEMBER WHERE NAME = '혜리'"
 						);			
 				if(rs.next()) {
-					s=rs.getString("MEM_ID");
+					s=rs.getString("NAME");
 				}else {
 					s="연결실패";
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			return s;
+		 return s;
 		}
 	
 }
