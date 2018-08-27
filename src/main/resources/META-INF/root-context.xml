@@ -29,7 +29,7 @@
                     <property name="suffix" value=".jsp" />
             </bean>
         </list>
-        </property>
+        </property> 
     </bean>
     <bean id="tilesConfigurer"
     class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
