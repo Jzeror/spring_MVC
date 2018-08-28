@@ -56,3 +56,6 @@
 	</tr>
 </table>
 </div>
+<script>
+app.userId('${user.memId}');
+</script>

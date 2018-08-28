@@ -7,10 +7,13 @@ app = {
 		app.session.context(x);
 		app.onCreate();
 	},
+	userId : x=>{
+		app.session.setSessionMemId(x);
+		app.onCreate();
+	},
 	onCreate : ()=>{
 		console.log('step : 3');
 		app.setContentView();
-		
 		$('#login_btn_header').click(()=>{
 			location.href= app.x()+"/move/auth/member/login";
 		});
@@ -18,7 +21,10 @@ app = {
 			location.href = app.x()+'/move/auth/member/login';
 		});
 		$('#loginFormBtn').click(()=>{
-			location.href = app.x()+'/member/login';
+			$('#user-login-form-id').attr({
+				action:app.x()+"/member/login",
+				method:"POST"
+					}).submit();
 		});
 		$('#login_out_auth').click(()=>{
 			location.href = app.x()+'/member/logout';
@@ -28,6 +34,29 @@ app = {
 		});
 		$('#join_btn_nav').click(()=>{
 			location.href = app.x()+'/move/auth/member/add';
+		});
+		$('#retrieve_btn_header').click(()=>{
+			location.href = app.x()+'/member/retrieve/'+app.session.getSessionMemId();
+		});
+		$('#join_form_btn').click(()=>{
+			/*var form = document.getElementById('join_form');
+			form.action = app.x()+"/member/add";
+			form.method = "POST";
+			form.submit();*/
+			
+			$('#join_form').attr({
+				action:app.x()+"/member/add",
+				method:"POST"
+					}).submit();
+		});
+		$('#remove_btn_header').click(()=>{
+			location.href = app.x()+'/move/loging/member/remove';
+		});
+		$('#delete_form_btn').click(()=>{
+			$('#delete_form').attr({
+					action : app.x()+"/member/remove",
+					method:"POST"
+			}).submit();
 		});
 		
 	},
@@ -45,6 +74,12 @@ app.session = {
 		},
 		path : x=>{
 			return sessionStorage.getItem(x);
+		},
+		setSessionMemId : x=>{
+			sessionStorage.setItem('sessionMemId',x);
+		},
+		getSessionMemId : ()=>{
+			return sessionStorage.getItem('sessionMemId');
 		}
 };
 app.x = ()=>{

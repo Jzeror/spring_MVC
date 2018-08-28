@@ -2,17 +2,17 @@
 	pageEncoding="UTF-8"%>
 <div id="content_box">
 	<form id="join_form">
-		아이디 : <input type="text" name="memid" /><br> 
-		이름 : <input	type="text" name="name" /><br> 
-		비밀번호 : <input type="text" name="password" /><br> 
-		주민등록번호(ex.940501-2) : <input type="text"	name="ssn" /> <br />
+		아이디 : <input type="text" name="memId" required/><br> 
+		이름 : <input	type="text" name="name" required/><br> 
+		비밀번호 : <input type="text" name="password" required/><br> 
+		주민등록번호(ex.940501-2) : <input type="text"	name="ssn" required/> <br />
 		<br /> 
 		소속팀 
-		<input type="radio" name="teamid" value="none"	checked="checked" /> 없음 
-			<input type="radio" name="teamid" value="A" />걍놀자 
-			<input type="radio" name="teamid" value="B" /> 지은이네 
-			<input type="radio" name="teamid" value="D" /> 왕거북이 
-			<input type="radio"	name="teamid" value="C" /> 코딩짱 <br /><br /> 
+		<input type="radio" name="teamId" value="none"	checked="checked" /> 없음 
+			<input type="radio" name="teamId" value="A" />걍놀자 
+			<input type="radio" name="teamId" value="B" /> 지은이네 
+			<input type="radio" name="teamId" value="D" /> 왕거북이 
+			<input type="radio"	name="teamId" value="C" /> 코딩짱 <br /><br /> 
 		프로젝트역할 
 		<select name="roll" id="roll">
 			<option value="leader">팀장</option>
@@ -23,12 +23,14 @@
 		</select> <br /><br /> 
 		수강과목 
 		<input type="checkbox" name="subject" value="java" checked="checked" /> Java 
-		<input type="checkbox" name="subject" value="clang" /> C언어 <input type="checkbox" name="subject"
-			value="JSP" /> JSP <input type="checkbox" name="subject" value="PHP" />
-		PHP <input type="checkbox" name="subject" value="nodejs" /> NodeJS <input
-			type="checkbox" name="subject" value="linux" /> Linux <input
-			type="checkbox" name="subject" value="html" /> HTML <input
-			type="checkbox" name="subject" value="spring" /> Spring <br />
-		<br /> <input id="join_form_btn" type="button" value="밸류" />
+		<input type="checkbox" name="subject" value="clang" /> C언어 
+		<input type="checkbox" name="subject" value="JSP" /> JSP 
+		<input type="checkbox" name="subject" value="PHP" />PHP 
+		<input type="checkbox" name="subject" value="nodejs" /> NodeJS 
+		<input type="checkbox" name="subject" value="linux" /> Linux 
+		<input type="checkbox" name="subject" value="html" /> HTML 
+		<input type="checkbox" name="subject" value="spring" /> Spring
+		<br /><br /> 
+		<input id="join_form_btn" type="button" value="밸류" />
 	</form>
 </div>

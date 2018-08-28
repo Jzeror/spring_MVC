@@ -9,9 +9,9 @@ public interface MemberDAO {
 	public void insert(MemberDTO p) ;
 	public List<?> selectList(Map<?,?> p) ;
 	public List<?> selectSome(Map<?,?> p) ;
-	public MemberDTO selectOne(Map<?,?> p) ;
+	public MemberDTO selectOne(MemberDTO p) ;
 	public int count(Map<?,?> p) ;
 	public void update(Map<?,?> p) ;
-	public void delete(Map<?,?> p) ;
-	public MemberDTO login(Map<?,?> p) ;  //선생님은 boolean 처리하심.
+	public void delete(MemberDTO member) ;
+	public MemberDTO login(MemberDTO member) ;  //선생님은 boolean 처리하심.
 }

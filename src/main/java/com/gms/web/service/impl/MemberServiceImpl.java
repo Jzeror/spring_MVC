@@ -1,5 +1,7 @@
 package com.gms.web.service.impl;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -14,8 +16,9 @@ public class MemberServiceImpl implements MemberService{
 	@Autowired MemberDAO memberDAO;
 	@Override
 	public void add(MemberDTO p) {
-		// TODO Auto-generated method stub
-		
+        p.setAge(String.valueOf(Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()).substring(2,4))-Integer.parseInt(p.getSsn().substring(0,2))+101));
+		p.setGender((p.getSsn().substring(7).equals("1")||p.getSsn().split("-")[1].equals("3"))?"남자":"여자");
+        memberDAO.insert(p);
 	}
 
 	@Override
@@ -31,7 +34,8 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public MemberDTO retrieve(Map<?, ?> p) {
+	public MemberDTO retrieve(MemberDTO p) {
+		System.out.println("retrievevevevev :: "+p.getMemId());
 		return memberDAO.selectOne(p);
 	}
 
@@ -48,15 +52,14 @@ public class MemberServiceImpl implements MemberService{
 	}
 
 	@Override
-	public void remove(Map<?, ?> p) {
-		// TODO Auto-generated method stub
+	public void remove(MemberDTO member) {
+		memberDAO.delete(member);
 		
 	}
 
 	@Override
-	public MemberDTO login(Map<?, ?> p) {
-		// TODO Auto-generated method stub
-		return null;
+	public MemberDTO login(MemberDTO member) {
+		return memberDAO.login(member);
 	}
 
 }

@@ -7,6 +7,8 @@
       <div class="intro-heading text-uppercase">니방? 내방!</div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="login_btn_header" >LOGIN</a>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="join_btn_header" >JOIN</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="retrieve_btn_header" >RETRIEVE</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="remove_btn_header" >REMOVE</a>
     </div>
   </div>
 </header>

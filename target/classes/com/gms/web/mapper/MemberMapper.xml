@@ -4,6 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gms.web.mapper.MemberMapper">
   <select id="selectOne" resultType="com.gms.web.domain.MemberDTO">
-    SELECT * FROM MEMBER WHERE MEM_ID LIKE #{memId}
+    SELECT MEM_ID memId, TEAM_ID teamId, NAME, ROLL, PASSWORD, SSN, AGE, GENDER FROM MEMBER WHERE MEM_ID LIKE #{memId}
   </select>
+  <select id="login" resultType="com.gms.web.domain.MemberDTO">
+    SELECT MEM_ID memId, TEAM_ID teamId, NAME, ROLL, PASSWORD, SSN, AGE, GENDER FROM MEMBER WHERE MEM_ID LIKE #{memId} AND PASSWORD LIKE #{password}
+  </select>
+ 	<insert id="insert">
+ 	INSERT INTO MEMBER (MEM_ID, TEAM_ID, NAME, ROLL, PASSWORD, SSN, AGE, GENDER) VALUES (#{memId}, #{teamId}, #{name}, #{roll}, #{password}, #{ssn} , #{age}, #{gender});
+ 	</insert>
+ 	<delete id="delete">
+ 	DELETE FROM MEMBER WHERE MEM_ID LIKE #{memId} AND PASSWORD LIKE #{password};
+ 	</delete>
 </mapper>
