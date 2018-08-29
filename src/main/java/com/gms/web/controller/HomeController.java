@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -33,5 +34,24 @@ public class HomeController {
     		@PathVariable String page) {
         logger.info("HomeController ::: move() {}.", "ENTER");
     	return  prefix+":"+dir+"/"+page+".tiles";
+    }
+    
+    @RequestMapping("/move/{memId}/{teamId}/{name}/{roll}/{age}/{ssn}/{gender}")
+    public String move(
+    		@PathVariable String memId,
+    		@PathVariable String teamId,
+    		@PathVariable String name,
+    		@PathVariable String roll,
+    		@PathVariable String age,
+    		@PathVariable String ssn,
+    		@PathVariable String gender,Model model) {
+    	model.addAttribute("memId", memId);
+    	model.addAttribute("teamId", teamId);
+    	model.addAttribute("name", name);
+    	model.addAttribute("roll", roll);
+    	model.addAttribute("age", age);
+    	model.addAttribute("ssn", ssn);
+    	model.addAttribute("gender", gender);
+    	return  "modify:member/modify.tiles";
     }
 }

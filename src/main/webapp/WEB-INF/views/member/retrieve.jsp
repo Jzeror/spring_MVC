@@ -57,5 +57,13 @@
 </table>
 </div>
 <script>
-app.userId('${user.memId}');
+app.user({
+	memId : '${user.memId}',
+	name : '${user.name}',
+	ssn : '${user.ssn}',
+	roll : '${user.roll}',
+	teamId : '${user.teamId}',
+	age : '${user.age}',
+	gender : '${user.gender}'
+});
 </script>

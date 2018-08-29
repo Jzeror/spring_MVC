@@ -29,4 +29,8 @@
 		<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
+	<definition name="modify:member/modify.tiles" extends="public">
+		<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/views/member/modify.jsp"/>
+	</definition>
 </tiles-definitions>

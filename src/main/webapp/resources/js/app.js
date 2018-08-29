@@ -7,9 +7,14 @@ app = {
 		app.session.context(x);
 		app.onCreate();
 	},
-	userId : x=>{
-		app.session.setSessionMemId(x);
-		app.onCreate();
+	user : x=>{
+		sessionStorage.setItem('sessionMemId',x.memId);
+		sessionStorage.setItem('sessionName',x.name);
+		sessionStorage.setItem('sessionSsn',x.ssn);
+		sessionStorage.setItem('sessionRoll',x.roll);
+		sessionStorage.setItem('sessionTeamId',x.teamId);
+		sessionStorage.setItem('sessionAge',x.age);
+		sessionStorage.setItem('sessionGender',x.gender);
 	},
 	onCreate : ()=>{
 		console.log('step : 3');
@@ -27,6 +32,13 @@ app = {
 					}).submit();
 		});
 		$('#login_out_auth').click(()=>{
+			sessionStorage.removeItem('sessionMemId');
+			sessionStorage.removeItem('sessionName');
+			sessionStorage.removeItem('sessionSsn');
+			sessionStorage.removeItem('sessionRoll');
+			sessionStorage.removeItem('sessionTeamId');
+			sessionStorage.removeItem('sessionAge');
+			sessionStorage.removeItem('sessionGender');
 			location.href = app.x()+'/member/logout';
 		});
 		$('#join_btn_header').click(()=>{
@@ -36,7 +48,7 @@ app = {
 			location.href = app.x()+'/move/auth/member/add';
 		});
 		$('#retrieve_btn_header').click(()=>{
-			location.href = app.x()+'/member/retrieve/'+app.session.getSessionMemId();
+			location.href = app.x()+'/member/retrieve/'+sessionStorage.getItem('sessionMemId');
 		});
 		$('#join_form_btn').click(()=>{
 			/*var form = document.getElementById('join_form');
@@ -58,6 +70,15 @@ app = {
 					method:"POST"
 			}).submit();
 		});
+		$('#updateConfirmBtn').click(()=>{
+			$('#update_id').attr({
+				action : app.x()+"/member/modify",
+				method:"POST"
+			}).submit();
+		});
+		$('#modify_btn_header').click(()=>{
+			location.href = app.x()+'/move/'+sessionStorage.getItem('sessionMemId')+'/'+sessionStorage.getItem('sessionTeamId')+'/'+sessionStorage.getItem('sessionName')+'/'+sessionStorage.getItem('sessionRoll')+'/'+sessionStorage.getItem('sessionAge')+'/'+sessionStorage.getItem('sessionSsn')+'/'+sessionStorage.getItem('sessionGender');
+		});
 		
 	},
 	setContentView : ()=>{
@@ -74,12 +95,6 @@ app.session = {
 		},
 		path : x=>{
 			return sessionStorage.getItem(x);
-		},
-		setSessionMemId : x=>{
-			sessionStorage.setItem('sessionMemId',x);
-		},
-		getSessionMemId : ()=>{
-			return sessionStorage.getItem('sessionMemId');
 		}
 };
 app.x = ()=>{

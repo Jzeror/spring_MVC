@@ -10,11 +10,11 @@
 						alt="" />
 					</td>
 					<td>ID</td>
-					<td colspan="2">${user.memId}</td>
+					<td colspan="2">${memId}</td>
 				</tr>
 				<tr>
 					<td>이름</td>
-					<td colspan="2">${user.name}</td>
+					<td colspan="2">${name}</td>
 				</tr>
 				<tr>
 					<td>비번</td>
@@ -24,10 +24,10 @@
 					<td colspan="3"><input type="button" id="mypageMoveBtn"
 						value="♥내페이지로 돌아가기" /></td>
 					<td>나이</td>
-					<td colspan="2">${user.age}세</td>
+					<td colspan="2">${age}세</td>
 				</tr>
 				<tr>
-					<td>현재팀: ${user.teamId}</td>
+					<td>현재팀: ${teamId}</td>
 					<td colspan="2"> 		
 						<input type = "radio" id="teamid_1" name="teamId"
 							value="A" /> 걍놀자
@@ -38,10 +38,10 @@
 						<input type = "radio" id="teamid_4" name="teamId"
 							value="C" /> 코딩짱</td>
 					<td>성별</td>
-					<td colspan="2">${user.gender}</td>
+					<td colspan="2">${gender}</td>
 				</tr>
 				<tr>
-					<td>현재 역할 : ${user.roll}</td>
+					<td>현재 역할 : ${roll}</td>
 					<td colspan="2">
 					<select name="roll" id="roll">
 							<option value="leader">팀장</option>
@@ -52,15 +52,9 @@
 					</select>
 					</td>
 					<td>주민등록번호</td>
-					<td colspan="2">${user.ssn}</td>
+					<td colspan="2">${ssn}</td>
 				</tr>
 			</table>
-			<input type="hidden" name="exTeamid" value='${user.teamId}'/>
-			<input type="hidden" name="exRoll" value='${user.roll}'/>
-			<input type="hidden" name="exPass" value='${user.password}'/>
-			<input type="hidden" name="memId" value=${user.memId } /> 
-			<input type="hidden" name="action" value="modify" /> 
-			<input type="hidden" name="page" value="modify" /> 
 			<input type="button" id="updateConfirmBtn" value="수정확인" />
 		</form>
 		

@@ -9,6 +9,7 @@
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="join_btn_header" >JOIN</a>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="retrieve_btn_header" >RETRIEVE</a>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="remove_btn_header" >REMOVE</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="modify_btn_header" >MODIFY</a>
     </div>
   </div>
 </header>
