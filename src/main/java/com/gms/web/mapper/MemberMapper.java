@@ -21,7 +21,7 @@ public class MemberMapper implements MemberDAO {
 		sqlSession.insert(ns+".insert",p);
 	}
 
-	@Override
+	@Override 
 	public List<?> selectList(Map<?, ?> p) {
 		// TODO Auto-generated method stub
 		return null;
