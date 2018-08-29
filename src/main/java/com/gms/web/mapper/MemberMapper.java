@@ -35,10 +35,7 @@ public class MemberMapper implements MemberDAO {
 
 	@Override
 	public MemberDTO selectOne(MemberDTO p) {
-
-    	System.out.println("retrieve :: " +p.getMemId() );
 		SqlSession sqlSession = factory.openSession();
-		
 		return sqlSession.selectOne(ns+".selectOne",p);
 	}
 
@@ -56,8 +53,6 @@ public class MemberMapper implements MemberDAO {
 
 	@Override
 	public void delete(MemberDTO member) {
-		System.out.println("오냐 ::: "+member.getMemId());
-		System.out.println("오냐 ::: "+member.getPassword());
 		factory.openSession().delete(ns+".delete",member);
 		
 	}

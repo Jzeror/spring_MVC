@@ -37,6 +37,7 @@ public class MemberController {
     	model.addAttribute("user", memberService.retrieve(member));
     	return "retrieve_go";
     }
+    
     @RequestMapping("/count")
     public void count() {}
     @RequestMapping("/modify")
