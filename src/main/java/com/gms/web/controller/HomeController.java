@@ -52,6 +52,7 @@ public class HomeController {
     	model.addAttribute("age", age);
     	model.addAttribute("ssn", ssn);
     	model.addAttribute("gender", gender);
+    	
     	//재경이 형이 이걸언제 발견할지는 모르겠지만 발견하시면 진태 옆구리를 한대 찔러주시면 감사드리겠습니다.가나다라마바사abcd
     	return  "modify:member/modify.tiles";
     }

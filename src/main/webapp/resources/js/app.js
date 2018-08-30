@@ -1,6 +1,7 @@
 "use strict";
 
 var app = app || {};
+var user = user || {};
 app = {
 	init : x=>{
 		console.log('step : 1');
@@ -8,13 +9,9 @@ app = {
 		app.onCreate();
 	},
 	user : x=>{
-		sessionStorage.setItem('sessionMemId',x.memId);
-		sessionStorage.setItem('sessionName',x.name);
-		sessionStorage.setItem('sessionSsn',x.ssn);
-		sessionStorage.setItem('sessionRoll',x.roll);
-		sessionStorage.setItem('sessionTeamId',x.teamId);
-		sessionStorage.setItem('sessionAge',x.age);
-		sessionStorage.setItem('sessionGender',x.gender);
+		$.each(x, (k,v)=>{
+			sessionStorage.setItem(k,v);
+		});
 	},
 	onCreate : ()=>{
 		console.log('step : 3');
@@ -48,7 +45,7 @@ app = {
 			location.href = app.x()+'/move/auth/member/add';
 		});
 		$('#retrieve_btn_header').click(()=>{
-			location.href = app.x()+'/member/retrieve/'+sessionStorage.getItem('sessionMemId');
+			location.href = app.x()+'/member/retrieve/'+sessionStorage.getItem('memId');
 		});
 		$('#join_form_btn').click(()=>{
 			/*var form = document.getElementById('join_form');
@@ -77,7 +74,7 @@ app = {
 			}).submit();
 		});
 		$('#modify_btn_header').click(()=>{
-			location.href = app.x()+'/move/'+sessionStorage.getItem('sessionMemId')+'/'+sessionStorage.getItem('sessionTeamId')+'/'+sessionStorage.getItem('sessionName')+'/'+sessionStorage.getItem('sessionRoll')+'/'+sessionStorage.getItem('sessionAge')+'/'+sessionStorage.getItem('sessionSsn')+'/'+sessionStorage.getItem('sessionGender');
+			location.href = app.x()+'/move/'+sessionStorage.getItem('memId')+'/'+sessionStorage.getItem('teamId')+'/'+sessionStorage.getItem('name')+'/'+sessionStorage.getItem('roll')+'/'+sessionStorage.getItem('age')+'/'+sessionStorage.getItem('ssn')+'/'+sessionStorage.getItem('gender');
 		});
 		
 	},
@@ -108,4 +105,7 @@ app.c = ()=>{
 };
 app.i = ()=>{
 	return app.session.path('img');
+};
+user.session = {
+		
 };
